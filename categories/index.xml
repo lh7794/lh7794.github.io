@@ -1,13 +1,14 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Categories on lihao`s Blog</title>
-    <link>https://mogeko.github.io/categories/</link>
-    <description>Recent content in Categories on lihao`s Blog</description>
+    <title>Categories on 李浩的Github Page</title>
+    <link>https://lh7794.github.io/categories/</link>
+    <description>Recent content in Categories on 李浩的Github Page</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>zh-cn</language>
+    <language>zh_CN</language>
+    <copyright>All rights reserved - 2017</copyright>
     
-	<atom:link href="https://mogeko.github.io/categories/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://lh7794.github.io/categories/index.xml" rel="self" type="application/rss+xml" />
     
     
   </channel>
