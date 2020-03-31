@@ -9,9 +9,9 @@
   
   
   
+  <link rel="prev" href="https://lh7794.github.io/2020/about/" />
   
-  
-  <link rel="canonical" href="https://lh7794.github.io/kubernetes/" />
+  <link rel="canonical" href="https://lh7794.github.io/2020/test/" />
   <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
   <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
   <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
@@ -22,10 +22,10 @@
   <title>
        
        
-            | Mogeko`s Blog
+           Test | Mogeko`s Blog
        
   </title>
-  <meta name="title" content=" | Mogeko`s Blog">
+  <meta name="title" content="Test | Mogeko`s Blog">
     
   
   <link rel="stylesheet" href="/font/iconfont.css">
@@ -43,21 +43,21 @@
          "@type": "WebPage",
          "@id": "https:\/\/lh7794.github.io"
     },
-    "articleSection" : "",
-    "name" : "",
-    "headline" : "",
-    "description" : "kubernetes核心功能  服务发现与负载均衡 容器自动装箱 存储编排 自动容器恢复 自动发布与回滚 配置与密文管理 批量执行 水平伸缩  Kubernetes的架构 Kubernetes主要由以下几个核心组件组成：\n etcd保存了整个集群的状态； apiserver提供了资源操作的唯一入口，并提供认证、授权、访问控制、API注册和发现等机制； controller manager负责维护集群的状态，比如故障检测、自动扩展、滚动更新等； scheduler负责资源的调度，按照预定的调度策略将Pod调度到相应的机器上； kubelet负责维护容器的生命周期，同时也负责Volume（CSI）和网络（CNI）的管理； Container runtime负责镜像管理以及Pod和容器的真正运行（CRI）； kube-proxy负责为Service提供cluster内部的服务发现和负载均衡；  除了核心组件，还有一些推荐的插件，其中有的已经成为CNCF中的托管项目：\n CoreDNS负责为整个集群提供DNS服务 Ingress Controller为服务提供外网入口 Prometheus提供资源监控 Dashboard提供GUI Federation提供跨可用区的集群  Kubernetes 架构是一个比较典型的二层架构和 server-client 架构。Master 作为中央的管控节点，会去与 Node 进行一个连接。下面是更为抽象的视图。\nMaster架构  **API Server：**顾名思义是用来处理 API 操作的，Kubernetes 中所有的组件都会和 API Server 进行连接，组件与组件之间一般不进行独立的连接，都依赖于 API Server 进行消息的传送； **Controller：**是控制器，它用来完成对集群状态的一些管理。比如刚刚我们提到的两个例子之中，第一个自动对容器进行修复、第二个自动进行水平扩张，都是由 Kubernetes 中的 Controller 来进行完成的； **Scheduler：**是调度器，“调度器”顾名思义就是完成调度的操作，就是我们刚才介绍的第一个例子中，把一个用户提交的 Container，依据它对 CPU、对 memory 请求大小，找一台合适的节点，进行放置； **etcd：**是一个分布式的一个存储系统，API Server 中所需要的这些原信息都被放置在 etcd 中，etcd 本身是一个高可用系统，通过 etcd 保证整个 Kubernetes 的 Master 组件的高可用性。  Node架构  Pod: Pod是Kubernetes管理的最小单位，Kubernetes不会对容器直接操作，Pod和容器是什么关系呢？Pod可以包括一个或多个容器，每个Pod都有自己的namespace(网络、存储等资源)，在一个Pod内部的多个容器之间关系类似系统间的进程之间关系，使用网络直接用localhost就可以通信。 kubelet: kubelet负责管理pods和它们上面的容器，images镜像、volumes等。 kube-proxy: 每一个节点也运行一个简单的网络代理和负载均衡，例如创建service资源需要kube-proxy。 fluentd: 日志收集工具  kubernetes的服务发现机制 ​\t任何分布式系统都会涉及“服务发现”这个基础问题，大部分分布式系统都通过提供特定的API接口来实现服务发现功能，但这样做会导致平台的侵入性比较强，也增加了开发、测试的难度。Kubernetes则采用了直观朴素的思路去解决这个棘手的问题。",
+    "articleSection" : "posts",
+    "name" : "Test",
+    "headline" : "Test",
+    "description" : "kubernetes核心功能 服务发现与负载均衡 容器自动装箱 存储编排 自动容器恢复 自动发布与回滚 配置与密文管理 批量执行 水平伸缩 Kubernete",
     "inLanguage" : "zh-cn",
     "author" : "Mogeko",
     "creator" : "Mogeko",
     "publisher": "Mogeko",
     "accountablePerson" : "Mogeko",
     "copyrightHolder" : "Mogeko",
-    "copyrightYear" : "0001",
-    "datePublished": "0001-01-01 00:00:00 \x2b0000 UTC",
-    "dateModified" : "0001-01-01 00:00:00 \x2b0000 UTC",
-    "url" : "https:\/\/lh7794.github.io\/kubernetes\/",
-    "wordCount" : "161",
+    "copyrightYear" : "2020",
+    "datePublished": "2020-03-31 14:46:49 \x2b0800 CST",
+    "dateModified" : "2020-03-31 14:46:49 \x2b0800 CST",
+    "url" : "https:\/\/lh7794.github.io\/2020\/test\/",
+    "wordCount" : "3440",
     "keywords" : [  "Mogeko`s Blog"]
 }
 </script>
@@ -114,10 +114,37 @@
     	 <main class="main">
           <div class="container">
       		
-<div class="post-warp archive">
-    <h2 class="post-title" style="text-align:right;padding-bottom:2em"></h2>
+<article class="post-warp" itemscope itemtype="http://schema.org/Article">
+    <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">Test</h1>
+        <div class="post-meta">
+                Written by <a itemprop="name" href="https://lh7794.github.io" rel="author">Mogeko</a> with ♥ 
+                <span class="post-time">
+                on <time datetime=2020-03-31 itemprop="datePublished">March 31, 2020</time>
+                </span>
+                in
+                
+        </div>
+    </header>
     <div class="post-content">
-        <h3 id="kubernetes核心功能">kubernetes核心功能</h3>
+        
+
+        
+            
+        
+
+        
+        
+     
+          
+          
+          
+
+          
+          
+          
+
+          <h3 id="kubernetes核心功能">kubernetes核心功能</h3>
 <ul>
 <li>服务发现与负载均衡</li>
 <li>容器自动装箱</li>
@@ -199,8 +226,50 @@
 <p>​	自动扩缩容机制：Kubernetes从1.1版本开始，新增了名为Horizontal Pod Autosacler（HPA）的控制器，用于实现基于CPU使用率进行自动Pod扩缩容的功能。HPA控制器基于Master的kube-controller-manager服务启动参数&ndash;horizontal-pod-autosacler-sync-period定义的探测周期（默认值为15s），周期性地监测目标Pod地资源性能指标，并于HPA资源对象中地扩缩容条件进行对比，在满足条件时对Pod副本数量进行调整。</p>
 
     </div>
-</div>
 
+    <div class="post-copyright">
+             
+            <p class="copyright-item">
+                <span>Author:</span>
+                <span>Mogeko </span>
+                </p>
+            
+           
+             
+            <p class="copyright-item">
+                    <span>Link:</span>
+                    <a href=https://lh7794.github.io/2020/test/>https://lh7794.github.io/2020/test/</span>
+            </p>
+            
+             
+            <p class="copyright-item lincese">
+                本文采用<a rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/" target="_blank">知识共享署名-非商业性使用 4.0 国际许可协议</a>进行许可
+            </p>
+            
+    </div>
+
+  
+    <div class="post-tags">
+        
+        <section>
+                <a href="javascript:window.history.back();">back</a></span> · 
+                <span><a href="https://lh7794.github.io">home</a></span>
+        </section>
+    </div>
+
+    <div class="post-nav">
+        
+        <a href="https://lh7794.github.io/2020/about/" class="prev" rel="prev" title="About"><i class="iconfont icon-left"></i>&nbsp;About</a>
+         
+        
+    </div>
+
+    <div class="post-comment">
+          
+                 
+          
+    </div>
+</article>
           </div>
 		   </main>
       <footer class="footer">
@@ -233,8 +302,9 @@
 
 
     
-    
-    <script src="/js/vendor_no_gallery.min.js" async=""></script>
+     <link href="//lib.baomitu.com/lightgallery/1.6.11/css/lightgallery.min.css" rel="stylesheet">  
+      
+     <script src="/js/vendor_gallery.min.js" async="" ></script>
     
   
 
