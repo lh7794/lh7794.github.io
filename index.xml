@@ -1,0 +1,11 @@
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>lihao`s Blog on lihao`s Blog</title>
+    <link>https://mogeko.github.io/</link>
+    <description>Recent content in lihao`s Blog on lihao`s Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-cn</language>
+    <atom:link href="/" rel="self" type="application/rss+xml" />
+    
+  </channel>
+</rss>
